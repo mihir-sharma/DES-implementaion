@@ -63,4 +63,4 @@ for h in range(0,16):
     subkey[h] = PC2_permutator(recombkey[h])
     print(recombkey[h])
 
-
+# 00100111111111111111111100000000100110101100111000100001    ---    sample input
