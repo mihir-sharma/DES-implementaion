@@ -1,6 +1,7 @@
 y= input("enter 8 letter key")
 key=[1,2,3,4,5,6,7,8]
 z=[1,2,3,4,5,6,7,8]
+keyfull = ''
 for i in range(0,8):
     z[i]=ord(y[i])
     key[i]=int(bin(z[i])[2:])
@@ -15,4 +16,6 @@ for i in range(0,8):
         key[i]= 10*key[i] + 0
     else:
         key[i]=10*key[i] + 1
-print(key)
+    keyfull = keyfull + str(key[i])
+
+print(keyfull)
