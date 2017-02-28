@@ -37,14 +37,14 @@ def key_rotator(L,R,keyno):
     return LN, RN
 
 yi = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8]
+leftkey=[2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9]
+rightkey=[2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9]
 rotator = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1]
 y = input("enter permuted key")
 left,right =key_splitter(y)
-for n in range(0, 9):
-    globals()['leftk%s' %n],globals()['rightk%s' %n]= key_rotator(left,right,rotator[n])
+for h in range(0,16):
+    leftkey[h],rightkey[h]=key_rotator(left,right,rotator[h])
+    print(leftkey[h])
+    print(rightkey[h])
+    print("\n\n")
 
-print(leftk1)
-print(leftk4)
-print("\n\n")
-print(rightk1)
-print(rightk4)
